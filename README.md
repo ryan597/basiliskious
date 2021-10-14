@@ -17,6 +17,10 @@ make -k
 make
 ```
 
+## Example
+
+For an example, see the [Tutorial](program1/test.c), which was simply taken from the [Basilisk](http://basilisk.fr/Tutorial) website. 
+
 ## Using the Makefile
 
 When you want to start a new project, create a new folder to keep all files in. Then change into this directory and create a simple `Makefile`.
@@ -34,17 +38,18 @@ CFLAGS += -O2
 include $(BASILISK)/Makefile.defs
 ```
 
-When you want to compile `file.c`  and run the code, all you have to do is type
+Now you can "Do the Things" for your simulation eg. in a file called `test.c`.
+
+When you want to compile `test.c`  and run the code, all you have to do is type
 
 ```bash
-make file.tst  # NOTE: We compile file.c but have told it to make file.tst
+make test.tst  # NOTE: We have told it to make test.tst, in the Makefile.defs there are rules for this
 ```
 
-This will create the folder `file` in your directory.
-For the simple test case included here, you can try
+This will create the folder `test` in your directory.
+With the included files you should now be able to see the output animation.
 
 ```bash
-make test.tst
 animate test/out  # here we display the animation
 ```
 
