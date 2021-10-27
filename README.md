@@ -6,11 +6,13 @@ The setup is made simple with the following shell code. Open the terminal and pa
 
 ```bash
 sudo apt install darcs flex bison make gawk  ## Installs dependency libraries
+sudo apt install gnuplot imagemagick ffmpeg graphviz valgrind gifsicle pstoedit # Plotting libs
 darcs get --lazy http://basilisk.fr/basilisk  ## Get Basilisk library
 cd basilisk/src
 
 echo "export BASILISK=$PWD" >> ~/.bashrc  # Export the paths so you can build from any directory
 echo "export PATH=\$PATH:$BASILISK" >> ~/.bashrc
+source ~/.bashrc  # Reload the rc
 
 ln -s config.gcc config  # Symbolic link to the config
 make -k
